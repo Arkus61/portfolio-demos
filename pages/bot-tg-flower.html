@@ -3,18 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Telegram-бот цветочного магазина</title>
-  <meta name="description" content="Демо-проект для портфолио: Telegram-бот цветочного магазина">
+  <title>Maison Bloom — симулятор Telegram</title>
+  <meta name="description" content="Выберите повод и бюджет. Бот предложит конкретные букеты, поможет добавить открытку и покажет условия доставки по Санкт-Петербургу.">
   <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/editorial.css">
+  <link rel="stylesheet" href="../assets/experience.css">
+  <script src="../assets/bots.js" defer></script>
 </head>
-<body>
-  <div class="page">
-<header class="topbar"><div class="container nav"><a class="brand" href="../index.html"><span class="brand-mark"></span><span>Telegram bot / Maison Bloom</span></a><nav class="nav-links"><a href="#flow">Сценарий</a><a href="#chat">Демо</a><a href="#value">Польза</a></nav><a class="btn" href="#chat">Пример диалога</a></div></header>
-<section class="hero"><div class="container hero-grid"><div><div class="kicker">Telegram bot / flowers</div><h1 class="display">Бот, который помогает <strong>быстро выбрать букет</strong></h1><p class="lead">Для цветочного магазина особенно важна скорость: повод, бюджет, срочность доставки и фото букета. Этот бот берёт это на себя в тёплой пастельной подаче.</p><div class="hero-actions"><a class="btn" href="#chat">Открыть чат</a><a class="ghost" href="#value">Преимущества</a></div></div><div class="hero-visual"><div class="petal-bg"></div><div class="hero-caption"><div class="badge">soft commerce / florist assistant</div><h2 style="font:400 40px/1.05 var(--serif);margin:18px 0 8px;max-width:360px">Заботливый сценарий вместо хаотичной переписки</h2><p class="muted">Подходит для заказов в Telegram без сложного сайта и длинных уточнений.</p></div></div></div></section>
-<section class="section" id="flow"><div class="container split"><div class="card"><div class="eyebrow">Логика бота</div><div class="flow-steps"><div class="step"><div class="step-num">1</div><div><strong>Повод</strong><div class="muted">День рождения, свидание, благодарность, юбилей.</div></div></div><div class="step"><div class="step-num">2</div><div><strong>Бюджет</strong><div class="muted">Быстрые сегменты: до 3 000, 3 000–5 000, от 5 000 ₽.</div></div></div><div class="step"><div class="step-num">3</div><div><strong>Доставка</strong><div class="muted">Сегодня / к определённому времени / самовывоз.</div></div></div><div class="step"><div class="step-num">4</div><div><strong>Оформление</strong><div class="muted">Открытка, подпись, фото букета перед отправкой.</div></div></div></div></div><div class="card soft" id="value"><div class="eyebrow">Почему это продаёт</div><ul class="list"><li><span class="feature-icon">✓</span><span>Помогает клиенту быстрее принять решение и не потеряться в вариантах.</span></li><li><span class="feature-icon">✓</span><span>Собирает заказ в удобной форме для флориста.</span></li><li><span class="feature-icon">✓</span><span>Хорошо подходит для рекламы и ведения трафика сразу в Telegram.</span></li></ul></div></div></section>
-<section class="section" id="chat"><div class="container split"><div class="chat-shell"><div class="chat-head"><div class="chat-avatar"></div><div><strong>Maison Bloom assistant</strong><div class="muted">Telegram bot</div></div></div><div class="chat-log" id="flog" role="log" aria-label="История диалога"><div class="msg alt">Здравствуйте! Помогу выбрать букет. Для какого повода нужен заказ?</div><div class="msg self">Для дня рождения</div><div class="msg alt">Поняла 🌸 Подскажите комфортный бюджет, и я предложу подходящие варианты.</div></div><div class="chat-actions"><button data-add-msg="До 3 000 ₽" data-reply="Рекомендую лёгкие сезонные букеты и мини-композиции. Показать варианты?" data-target="#flog">До 3 000 ₽</button><button data-add-msg="3 000–5 000 ₽" data-reply="В этом диапазоне хорошо подойдут «Нежность утра» и «Розовое облако». Нужна доставка сегодня?" data-target="#flog">3 000–5 000 ₽</button><button data-add-msg="Нужна доставка сегодня" data-reply="Да, можем доставить сегодня. Напишите адрес и желаемое время." data-target="#flog">Доставка сегодня</button></div></div><div class="card"><div class="eyebrow">Дополнительно</div><div class="flow-steps"><div class="step"><div class="step-num">+</div><div><strong>Оплата по ссылке</strong><div class="muted">Можно подключить оплату или резерв заказа.</div></div></div><div class="step"><div class="step-num">+</div><div><strong>Фото букета</strong><div class="muted">Отправка фото перед доставкой как точка доверия.</div></div></div><div class="step"><div class="step-num">+</div><div><strong>Повторный маркетинг</strong><div class="muted">Напоминания к датам и специальным поводам.</div></div></div></div></div></div></section>
-<footer class="footer"><div class="container footer-grid"><div><strong>Формат:</strong> бот-продавец для цветочного магазина.</div><div class="note">Может быть отдельной услугой или частью пакета «сайт + бот».</div></div></footer>
-</div>
-  <script src="../assets/app.js"></script>
+<body class="project-theme bot-page theme-flowers">
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Портфолио"><span class="brand-mark" aria-hidden="true"></span>Демо-портфолио</a>
+      <nav class="nav-links" aria-label="Разделы симулятора"><a href="#flow">Что попробовать</a><a href="site-flowers.html">Сайт проекта</a></nav>
+      <a class="btn" href="#chat">Открыть чат</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container bot-grid">
+        <div class="bot-intro">
+          <p class="kicker">Симулятор Telegram</p>
+          <h1 class="display">Цветы для <strong>нужного момента</strong></h1>
+          <p class="lead">Выберите повод и бюджет. Бот предложит конкретные букеты, поможет добавить открытку и покажет условия доставки по Санкт-Петербургу.</p>
+          <figure class="bot-cover"><img src="../assets/art/maison-bloom-preview.webp" alt="" width="640" height="800"></figure>
+        </div>
+        <section class="bot-shell" id="chat" data-bot="flowers" aria-label="Интерактивный чат">
+          <header class="bot-chat-header">
+            <span class="bot-avatar" aria-hidden="true">✿</span>
+            <div><h2>Maison Bloom</h2><p>Telegram · Демо-чат</p></div>
+            <span class="bot-progress" data-progress>Шаг 1</span>
+          </header>
+          <div class="bot-log" data-log role="log" aria-label="История переписки" tabindex="0">
+            <noscript><p>Включите JavaScript, чтобы пройти диалог.</p></noscript>
+          </div>
+          <div class="bot-panel">
+            <div class="bot-options" data-chat-options aria-label="Варианты ответа"></div>
+            <div class="bot-toolbar">
+              <button type="button" data-chat-back disabled>Назад на шаг</button>
+              <button type="button" data-chat-reset disabled>Начать заново</button>
+            </div>
+            <p class="note">Это симуляция. Заявки и личные данные не отправляются.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="section service-section" id="flow">
+      <div class="container">
+        <div class="section-heading" id="value"><h2>Что попробовать</h2></div>
+        <div class="service-grid">
+          <article class="service-card"><h3>Подбор букета</h3><p>Бюджет меняет список рекомендаций. Выберите один из букетов из каталога Maison Bloom.</p></article>
+          <article class="service-card"><h3>Получение</h3><p>Сравните курьера и самовывоз. При доставке можно выбрать интервал.</p></article>
+          <article class="service-card"><h3>Подписка</h3><p>Посмотрите, как меняется сводка при выборе периодичности.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footer-grid"><a href="../index.html">Вернуться в портфолио</a><span class="note">Maison Bloom · Демонстрационный проект</span></div></footer>
 </body>
 </html>

@@ -3,18 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Telegram-консьерж SPA / отеля</title>
-  <meta name="description" content="Демо-проект для портфолио: Telegram-консьерж SPA / отеля">
+  <title>Akvaterra Concierge — симулятор Telegram</title>
+  <meta name="description" content="Консьерж загородного отеля помогает выбрать спокойные выходные, семейный отдых или отдельную процедуру и добавить поездку с водителем.">
   <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/editorial.css">
+  <link rel="stylesheet" href="../assets/experience.css">
+  <script src="../assets/bots.js" defer></script>
 </head>
-<body>
-  <div class="page">
-<header class="topbar"><div class="container nav"><a class="brand" href="../index.html"><span class="brand-mark"></span><span>Telegram-concierge / Akvaterra</span></a><nav class="nav-links"><a href="#flow">Сценарий</a><a href="#chat">Демо</a><a href="#usecase">Ценность</a></nav><a class="btn" href="#chat">Посмотреть диалог</a></div></header>
-<section class="hero"><div class="container hero-grid"><div><div class="kicker">Telegram bot / hospitality</div><h1 class="display">Консьерж, который помогает гостю <strong>ещё до приезда</strong></h1><p class="lead">Telegram-бот для SPA, загородного клуба или отеля: бронирование, пакеты отдыха, трансфер, чек-лист гостя и ответы на вопросы 24/7.</p><div class="hero-actions"><a class="btn" href="#chat">Открыть демо</a><a class="ghost" href="#usecase">Что решает</a></div></div><div class="hero-visual green"><div class="spa-visual"></div><div class="hero-caption"><div class="badge">quiet luxury / soft concierge</div><h2 style="font:400 40px/1.05 var(--serif);margin:18px 0 8px;max-width:390px">Продуманное гостевое сопровождение</h2><p class="muted">Снижает нагрузку на ресепшен и усиливает ощущение сервиса.</p></div></div></div></section>
-<section class="section" id="flow"><div class="container split"><div class="card"><div class="eyebrow">Что умеет бот</div><div class="flow-steps"><div class="step"><div class="step-num">1</div><div><strong>Подбор пакета</strong><div class="muted">Семейный отдых, spa-weekend, романтический пакет.</div></div></div><div class="step"><div class="step-num">2</div><div><strong>Бронирование</strong><div class="muted">Дата, формат проживания, число гостей.</div></div></div><div class="step"><div class="step-num">3</div><div><strong>Сервис до заезда</strong><div class="muted">Трансфер, время заезда, что взять с собой.</div></div></div><div class="step"><div class="step-num">4</div><div><strong>Сервис во время отдыха</strong><div class="muted">Запись в spa, ресторан, активности.</div></div></div></div></div><div class="card soft" id="usecase"><div class="eyebrow">Коммерческая ценность</div><ul class="list"><li><span class="feature-icon">✓</span><span>Ускоряет коммуникацию с гостями и улучшает сервис.</span></li><li><span class="feature-icon">✓</span><span>Дополнительно продаёт пакеты, spa-услуги и трансфер.</span></li><li><span class="feature-icon">✓</span><span>Снижает количество однотипных обращений в WhatsApp/Telegram.</span></li></ul></div></div></section>
-<section class="section" id="chat"><div class="container split"><div class="chat-shell"><div class="chat-head"><div class="chat-avatar"></div><div><strong>Akvaterra Concierge</strong><div class="muted">Telegram bot</div></div></div><div class="chat-log" id="tglog" role="log" aria-label="История диалога"><div class="msg alt">Добро пожаловать в Akvaterra. Помогу подобрать формат отдыха. Что вас интересует?</div><div class="msg self">SPA-уикенд на двоих</div><div class="msg alt">Есть пакет «Тихое восстановление»: 2 ночи, spa-доступ, завтрак и массаж. Хотите посмотреть даты или состав пакета?</div></div><div class="chat-actions"><button data-add-msg="Посмотреть даты" data-reply="На ближайшие выходные доступны 22–24 и 29–31 числа. Продолжим бронирование?" data-target="#tglog">Даты</button><button data-add-msg="Что входит в пакет?" data-reply="В пакет входят проживание, завтраки, spa-доступ и 2 расслабляющих массажа." data-target="#tglog">Состав пакета</button><button data-add-msg="Нужен трансфер" data-reply="Мы можем организовать трансфер из города. Напишите удобное время и адрес отправления." data-target="#tglog">Трансфер</button></div></div><div class="card"><div class="eyebrow">Можно развить дальше</div><div class="flow-steps"><div class="step"><div class="step-num">+</div><div><strong>Меню ресторана</strong><div class="muted">Предзаказ ужина, завтрака, special occasions.</div></div></div><div class="step"><div class="step-num">+</div><div><strong>Программа дня</strong><div class="muted">Занятия, spa-ритуалы, экскурсии, детские активности.</div></div></div><div class="step"><div class="step-num">+</div><div><strong>Напоминания</strong><div class="muted">Чек-ин, запись на массаж, выезд.</div></div></div></div></div></div></section>
-<footer class="footer"><div class="container footer-grid"><div><strong>Формат:</strong> Telegram-бот-консьерж для hospitality.</div><div class="note">Подходит как отдельный кейс для отелей, клубов отдыха, SPA и глэмпингов.</div></div></footer>
-</div>
-  <script src="../assets/app.js"></script>
+<body class="project-theme bot-page theme-spa">
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Портфолио"><span class="brand-mark" aria-hidden="true"></span>Демо-портфолио</a>
+      <nav class="nav-links" aria-label="Разделы симулятора"><a href="#flow">Что попробовать</a><a href="site-spa.html">Сайт SPA-решений</a></nav>
+      <a class="btn" href="#chat">Открыть чат</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container bot-grid">
+        <div class="bot-intro">
+          <p class="kicker">Симулятор Telegram</p>
+          <h1 class="display">Ваш отдых <strong>в диалоге</strong></h1>
+          <p class="lead">Консьерж загородного отеля помогает выбрать спокойные выходные, семейный отдых или отдельную процедуру и добавить поездку с водителем.</p>
+          <figure class="bot-cover"><img src="../assets/art/akvaterra-preview.webp" alt="" width="640" height="640"></figure>
+        </div>
+        <section class="bot-shell" id="chat" data-bot="spa" aria-label="Интерактивный чат">
+          <header class="bot-chat-header">
+            <span class="bot-avatar" aria-hidden="true">≈</span>
+            <div><h2>Akvaterra Concierge</h2><p>Telegram · Демо-чат</p></div>
+            <span class="bot-progress" data-progress>Шаг 1</span>
+          </header>
+          <div class="bot-log" data-log role="log" aria-label="История переписки" tabindex="0">
+            <noscript><p>Включите JavaScript, чтобы пройти диалог.</p></noscript>
+          </div>
+          <div class="bot-panel">
+            <div class="bot-options" data-chat-options aria-label="Варианты ответа"></div>
+            <div class="bot-toolbar">
+              <button type="button" data-chat-back disabled>Назад на шаг</button>
+              <button type="button" data-chat-reset disabled>Начать заново</button>
+            </div>
+            <p class="note">Это симуляция. Заявки и личные данные не отправляются.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="section service-section" id="flow">
+      <div class="container">
+        <div class="section-heading" id="usecase"><h2>Что попробовать</h2></div>
+        <div class="service-grid">
+          <article class="service-card"><h3>Подбор пакета</h3><p>У выходных вдвоём, семейного отдыха и визита на один день разные предложения.</p></article>
+          <article class="service-card"><h3>Запись на процедуру</h3><p>Сравните длительность ритуалов и выберите часть дня.</p></article>
+          <article class="service-card"><h3>Трансфер</h3><p>Укажите точку встречи и число пассажиров. Эти детали попадут в сводку.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footer-grid"><a href="../index.html">Вернуться в портфолио</a><span class="note">Akvaterra Concierge · Демонстрационный проект</span></div></footer>
 </body>
 </html>

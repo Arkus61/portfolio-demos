@@ -3,29 +3,172 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wonder Steps — детский центр</title>
-  <meta name="description" content="Демо-проект для портфолио: Wonder Steps — детский центр">
+  <title>Wonder Steps — Детский центр, Казань</title>
+  <meta name="description" content="Программы по возрасту и услуги. Демонстрационный сайт для портфолио.">
   <link rel="stylesheet" href="../assets/styles.css">
   <link rel="stylesheet" href="../assets/editorial.css">
+  <link rel="stylesheet" href="../assets/experience.css">
+  <script src="../assets/app.js" defer></script>
 </head>
 <body class="project-theme theme-kids">
-  <div class="page">
-<header class="topbar"><div class="container nav"><a class="brand" href="../index.html"><span class="brand-mark"></span><span>Wonder Steps</span></a><nav class="nav-links"><a href="#topics">Направления</a><a href="#stories">Программы</a><a href="#parents">Для родителей</a></nav><a class="btn" href="#parents">Записаться</a></div></header>
-<section class="hero"><div class="container hero-grid"><div><div class="kicker">Детский центр</div><h1 class="display">Пусть любопытство <strong>ведёт вперёд</strong></h1><p class="lead">Математика, чтение, творчество и первые эксперименты. Найдите программу по интересам ребёнка и запишитесь на пробное занятие.</p><div class="hero-actions"><a class="btn" href="#topics">Начать знакомство</a><a class="ghost" href="#stories">Программы</a></div></div>
-<figure class="project-hero">
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Портфолио, Wonder Steps"><span class="brand-mark" aria-hidden="true"></span>Wonder Steps</a>
+      <nav class="nav-links" aria-label="Разделы сайта">
+            <a href="#topics">Направления</a>
+            <a href="#stories">Программы</a>
+            <a href="#parents">Расписание</a>
+      </nav>
+      <a class="btn" href="#parents">Пробное занятие</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero"><div class="container hero-grid"><div><div class="kicker">Детский центр · Казань</div><h1 class="display">Пусть любопытство <strong>ведёт вперёд</strong></h1><p class="lead">Математика, чтение, творчество и первые эксперименты. Найдите программу по интересам ребёнка и запишитесь на пробное занятие.</p><div class="hero-actions"><a class="btn" href="#topics">Начать знакомство</a><a class="ghost" href="#stories">Программы</a></div></div>
+<figure class="project-hero" data-motion="orbit">
   <img src="../assets/art/wonder-steps-hero.webp"
        srcset="../assets/art/wonder-steps-preview.webp 640w, ../assets/art/wonder-steps-hero.webp 1024w"
        sizes="(max-width: 900px) calc(100vw - 40px), (max-width: 1240px) 47vw, 590px"
        alt="Дети мастерят ракету из картона и бумажные планеты" fetchpriority="high" decoding="async">
+<span class="hero-motion" aria-hidden="true"></span>
 </figure>
 </div></section>
-<section class="section" id="topics"><div class="container"><div class="eyebrow">Explore by topic</div><h2 class="display" style="font-size:52px">Направления</h2><div class="grid-4"><div class="card"><div class="feature-icon">🔢</div><h3>Математика</h3><p class="muted">Логика, счёт, внимательность.</p></div><div class="card"><div class="feature-icon">🧪</div><h3>Science lab</h3><p class="muted">Опыты и исследовательские задания.</p></div><div class="card"><div class="feature-icon">📚</div><h3>Чтение и речь</h3><p class="muted">Словарный запас, истории, коммуникация.</p></div><div class="card"><div class="feature-icon">🎨</div><h3>Творчество</h3><p class="muted">Рисование, поделки, воображение.</p></div></div></div></section>
-<section class="section" id="stories"><div class="container split"><div class="panel program-panel"><div class="eyebrow">Программы</div><figure class="project-photo project-photo--inline">
+    <section class="section service-section" id="topics">
+      <div class="container">
+        <div class="section-heading"><h2>Занятия в мастерских</h2></div>
+        <div class="service-grid">
+          <article class="service-card"><h3>Раннее развитие</h3><p>Игры на речь, моторику и координацию. Короткие блоки с паузами и движением.</p></article>
+          <article class="service-card"><h3>Подготовка к школе</h3><p>Чтение, счёт и графические задания в спокойном темпе.</p></article>
+          <article class="service-card"><h3>Языковая практика</h3><p>Английский через игры, мини-сценки и тематические проекты.</p></article>
+          <article class="service-card"><h3>Творческие студии</h3><p>Иллюстрация, лепка, бумажная пластика и групповые выставки работ.</p></article>
+          <article class="service-card"><h3>STEM-лаборатория</h3><p>Опыты с водой, светом и магнитами, конструирование и первые роботы.</p></article>
+          <article class="service-card"><h3>Каникулы в центре</h3><p>Проектные недели, тематические мастер-классы и занятия в небольших группах.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section catalog-section" id="stories">
+      <div class="container" data-catalog>
+        <div class="section-heading"><h2>Программы по возрасту</h2><p>У каждой программы указан возраст, длительность и стоимость пробного занятия.</p></div>
+        <div class="catalog-controls" hidden>
+          <div class="filters" role="group" aria-label="Категории каталога">
+            <button type="button" class="filter-button" data-filter="all" aria-pressed="true">Все</button>
+            <button type="button" class="filter-button" data-filter="little" aria-pressed="false">3–5 лет</button>
+            <button type="button" class="filter-button" data-filter="school" aria-pressed="false">5–7 лет</button>
+            <button type="button" class="filter-button" data-filter="older" aria-pressed="false">7–10 лет</button>
+            <button type="button" class="filter-button" data-filter="holiday" aria-pressed="false">Каникулы</button>
+          </div>
+          <p class="catalog-count" data-catalog-count role="status">Показано 12 из 12</p>
+        </div>
+        <div class="offer-grid">
+            <article class="catalog-card" data-category="little">
+              <p class="catalog-category">3–5 лет</p>
+              <h3>Первые истории</h3>
+              <p>3–5 лет · 35 минут. Сказка, пальчиковые игры и задания на словарь.</p>
+              <div class="catalog-meta"><strong>650 ₽</strong><button type="button" class="item-link" data-demo="Первые истории. Выберите день пробного занятия." data-choice-label="День" data-choices="Будни|Выходные">Попробовать</button></div>
+            </article>
+            <article class="catalog-card" data-category="little">
+              <p class="catalog-category">3–5 лет</p>
+              <h3>Цвет и форма</h3>
+              <p>3–5 лет · 35 минут. Гуашь, крупные формы и простые коллажи.</p>
+              <div class="catalog-meta"><strong>650 ₽</strong><button type="button" class="item-link" data-demo="Цвет и форма. Выберите день пробного занятия." data-choice-label="День" data-choices="Будни|Выходные">Попробовать</button></div>
+            </article>
+            <article class="catalog-card" data-category="little">
+              <p class="catalog-category">3–5 лет</p>
+              <h3>Музыкальная игра</h3>
+              <p>3–5 лет · 35 минут. Ритм, движение и знакомство с инструментами.</p>
+              <div class="catalog-meta"><strong>650 ₽</strong><button type="button" class="item-link" data-demo="Музыкальная игра. Выберите день пробного занятия." data-choice-label="День" data-choices="Будни|Выходные">Попробовать</button></div>
+            </article>
+            <article class="catalog-card" data-category="school">
+              <p class="catalog-category">5–7 лет</p>
+              <h3>Математика в игре</h3>
+              <p>5–7 лет · 45 минут. Счёт, закономерности и логические игры.</p>
+              <div class="catalog-meta"><strong>750 ₽</strong><button type="button" class="item-link" data-demo="Математика в игре. Выберите день пробного занятия." data-choice-label="День" data-choices="Будни|Выходные">Попробовать</button></div>
+            </article>
+            <article class="catalog-card" data-category="school">
+              <p class="catalog-category">5–7 лет</p>
+              <h3>Чтение и речь</h3>
+              <p>5–7 лет · 45 минут. Звуки, первые слова и пересказ короткой истории.</p>
+              <div class="catalog-meta"><strong>750 ₽</strong><button type="button" class="item-link" data-demo="Чтение и речь. Выберите день пробного занятия." data-choice-label="День" data-choices="Будни|Выходные">Попробовать</button></div>
+            </article>
+            <article class="catalog-card" data-category="school">
+              <p class="catalog-category">5–7 лет</p>
+              <h3>Английский через игру</h3>
+              <p>5–7 лет · 45 минут. Бытовая лексика, песни и сценки.</p>
+              <div class="catalog-meta"><strong>850 ₽</strong><button type="button" class="item-link" data-demo="Английский через игру. Выберите день пробного занятия." data-choice-label="День" data-choices="Будни|Выходные">Попробовать</button></div>
+            </article>
+            <article class="catalog-card" data-category="older">
+              <p class="catalog-category">7–10 лет</p>
+              <h3>Лаборатория открытий</h3>
+              <p>7–10 лет · 55 минут. Свет, магниты и безопасные опыты под наблюдением педагога.</p>
+              <div class="catalog-meta"><strong>950 ₽</strong><button type="button" class="item-link" data-demo="Лаборатория открытий. Выберите день пробного занятия." data-choice-label="День" data-choices="Будни|Выходные">Попробовать</button></div>
+            </article>
+            <article class="catalog-card" data-category="older">
+              <p class="catalog-category">7–10 лет</p>
+              <h3>Роботы из конструктора</h3>
+              <p>7–10 лет · 60 минут. Сборка механизма и испытание на простых задачах.</p>
+              <div class="catalog-meta"><strong>1 050 ₽</strong><button type="button" class="item-link" data-demo="Роботы из конструктора. Выберите день пробного занятия." data-choice-label="День" data-choices="Будни|Выходные">Попробовать</button></div>
+            </article>
+            <article class="catalog-card" data-category="older">
+              <p class="catalog-category">7–10 лет</p>
+              <h3>Студия комиксов</h3>
+              <p>7–10 лет · 55 минут. Раскадровка, персонажи и короткая иллюстрированная история.</p>
+              <div class="catalog-meta"><strong>850 ₽</strong><button type="button" class="item-link" data-demo="Студия комиксов. Выберите день пробного занятия." data-choice-label="День" data-choices="Будни|Выходные">Попробовать</button></div>
+            </article>
+            <article class="catalog-card" data-category="holiday">
+              <p class="catalog-category">Каникулы</p>
+              <h3>Космическая неделя</h3>
+              <p>7–10 лет · 5 дней. Макет ракеты и итоговая выставка.</p>
+              <div class="catalog-meta"><strong>6 900 ₽</strong><button type="button" class="item-link" data-demo="Космическая неделя. Выберите день пробного занятия." data-choice-label="День" data-choices="Будни|Выходные">Попробовать</button></div>
+            </article>
+            <article class="catalog-card" data-category="holiday">
+              <p class="catalog-category">Каникулы</p>
+              <h3>Мастерская путешествий</h3>
+              <p>5–7 лет · 5 дней. Карты, сказки и поделки о разных странах.</p>
+              <div class="catalog-meta"><strong>5 900 ₽</strong><button type="button" class="item-link" data-demo="Мастерская путешествий. Выберите день пробного занятия." data-choice-label="День" data-choices="Будни|Выходные">Попробовать</button></div>
+            </article>
+            <article class="catalog-card" data-category="holiday">
+              <p class="catalog-category">Каникулы</p>
+              <h3>Субботняя мастерская</h3>
+              <p>6–10 лет · 90 минут. Один законченный творческий проект.</p>
+              <div class="catalog-meta"><strong>1 200 ₽</strong><button type="button" class="item-link" data-demo="Субботняя мастерская. Выберите день пробного занятия." data-choice-label="День" data-choices="Будни|Выходные">Попробовать</button></div>
+            </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="parents">
+      <div class="container split feature-layout">
+        <figure class="project-photo feature-photo">
   <img src="../assets/art/wonder-steps-detail.webp" alt="Бумажный кораблик, телескоп и звёзды в творческой мастерской" loading="lazy" decoding="async">
-</figure><div class="catalog text-catalog" style="grid-template-columns:repeat(2,minmax(0,1fr))"><article class="product"><div class="product-body"><h4>Starry Balloon</h4><p class="muted">Тема: дружба и фантазия.</p></div></article><article class="product"><div class="product-body"><h4>Brave Little Sailor</h4><p class="muted">Тема: смелость и любознательность.</p></div></article><article class="product"><div class="product-body"><h4>Play & Learn</h4><p class="muted">Небольшие игры и задания по предметам.</p></div></article><article class="product"><div class="product-body"><h4>Featured adventure</h4><p class="muted">Большая история-путешествие.</p></div></article></div></div><div class="card soft"><div class="eyebrow">Что важно родителю</div><div class="flow-steps"><div class="step"><div class="step-num">1</div><div><strong>Понятный возраст</strong><div class="muted">Каждое направление и программа снабжаются возрастом и целью.</div></div></div><div class="step"><div class="step-num">2</div><div><strong>Безопасность и доверие</strong><div class="muted">Отзывы, педагоги, расписание, фото пространства.</div></div></div><div class="step"><div class="step-num">3</div><div><strong>Пробное занятие</strong><div class="muted">Ключевая конверсия сайта — заявка без необходимости звонить.</div></div></div></div></div></div></section>
-<section class="section" id="parents"><div class="container"><div class="cta-banner light"><div><div class="eyebrow">Loved by parents</div><h2 style="font:400 46px/1.03 var(--serif);margin:0 0 10px">Сайт, который помогает родителю принять решение</h2><p class="muted" style="max-width:550px">На странице есть блоки с преподавателями, отзывами, расписанием и кнопка “Записаться на пробный урок”.</p><div class="hero-actions"><button class="btn" type="button" data-demo="Выберите направление для пробного урока." data-choice-label="Направление" data-choices="Математика|Science lab|Чтение и речь|Творчество">Записаться</button><button class="ghost" type="button" data-demo="Пример расписания. Математика — вторник, 16:00. Science lab — четверг, 17:00. Чтение и речь — пятница, 16:00. Творчество — суббота, 11:00.">Посмотреть расписание</button></div></div><div><div class="eyebrow">Примеры отзывов</div><div class="grid-2"><div class="quote">“Ребёнок ждёт занятий, а мне легко выбрать программу и время.”<br><strong>— Мария, мама ученика</strong></div><div class="quote">“У сайта очень тёплый визуал, поэтому доверие возникает сразу.”<br><strong>— Анна, мама ученицы</strong></div></div></div></div></div></section>
-<footer class="footer"><div class="container footer-grid"><div><strong>Кейс:</strong> детский центр, школа, кружки, студия развития.</div><div class="note">Визуально ориентирован на playful-подачу, но с коммерческой логикой для родителей.</div></div></footer>
-</div>
-  <script src="../assets/app.js"></script>
+</figure>
+        <div class="card feature-copy">
+          <div class="section-heading"><h2>Пример расписания</h2><p>На пробном занятии ребёнок знакомится с педагогом и выполняет одно небольшое задание вместе с группой.</p></div>
+          <dl class="schedule">
+            <div><dt>Вторник · 16:00</dt><dd>Математика в игре · 5–7 лет</dd></div>
+            <div><dt>Четверг · 17:00</dt><dd>Лаборатория открытий · 7–10 лет</dd></div>
+            <div><dt>Пятница · 16:00</dt><dd>Первые истории · 3–5 лет</dd></div>
+            <div><dt>Суббота · 11:00</dt><dd>Субботняя мастерская · 6–10 лет</dd></div>
+          </dl>
+          <button type="button" class="btn" data-demo="Проверьте сценарий записи без ввода контактов." data-choice-label="Программа" data-choices="Первые истории|Математика в игре|Лаборатория открытий|Субботняя мастерская">Записаться на пробное</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container faq-layout">
+        <h2>Частые вопросы</h2>
+        <div class="faq">
+          <details><summary>Сколько детей в группе?</summary><p>В демонстрационном расписании группы рассчитаны на 6–8 детей. Педагог помогает выбрать уровень после знакомства.</p></details>
+          <details><summary>Нужно ли покупать материалы?</summary><p>Основные материалы предусмотрены в сценарии занятия. С собой достаточно взять сменную обувь и воду.</p></details>
+          <details><summary>Что будет на пробном занятии?</summary><p>Ребёнок выполнит небольшое задание вместе с группой. После занятия можно обсудить следующий шаг с педагогом.</p></details>
+        </div>
+      </div>
+    </section>
+    <section class="section compact">
+      <div class="container"><div class="bot-callout">
+        <div><h2>Подобрать программу в VK-демо</h2><p>Бот спросит возраст и интересы, предложит программу и покажет запись на пробное занятие.</p></div>
+        <a class="btn" href="bot-vk-kids.html">Открыть симулятор</a>
+      </div></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footer-grid"><a href="../index.html">Вернуться в портфолио</a><span class="note">Wonder Steps · Казань. Демонстрационный проект. Цены и условия приведены для примера.</span></div></footer>
 </body>
 </html>
