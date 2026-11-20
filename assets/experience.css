@@ -348,3 +348,152 @@
   [data-motion] .hero-motion::before, [data-motion] .hero-motion::after,
   .bot-message, .chat-summary { animation: none; }
 }
+
+.concept-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 24px;
+  flex-wrap: wrap;
+  padding-block: 10px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .875rem;
+}
+.concept-note p { margin: 0; }
+.concept-note strong, .concept-note a { color: var(--ink); }
+.concept-note a { text-decoration: underline; text-underline-offset: 3px; font-weight: 650; }
+.project-theme .hero .display { text-wrap: balance; overflow-wrap: anywhere; }
+.project-theme .catalog-photo-note { margin: -8px 0 17px; color: var(--muted); font-size: .9375rem; }
+
+.service-card, .catalog-card { --gallery-pad: 20px; }
+.card-photo {
+  width: calc(100% + 2 * var(--gallery-pad));
+  max-width: none;
+  margin: calc(-1 * var(--gallery-pad)) calc(-1 * var(--gallery-pad)) 15px;
+  aspect-ratio: 1.65;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  background: var(--surface-2);
+}
+.service-card .card-photo { aspect-ratio: 2; }
+.theme-flowers .catalog-card .card-photo { aspect-ratio: 1.5; }
+.theme-windows .card-photo { object-position: center 55%; }
+.theme-kids .project-hero img, .theme-beauty .project-hero img { object-position: 54% center; }
+
+.contact-card, .measure-note {
+  background: var(--surface-2);
+  border-radius: 18px;
+  padding: clamp(16px, 3vw, 26px);
+}
+.contact-card { display: flex; align-items: start; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+.contact-card .section-heading, .feature-copy .section-heading:has(address) { margin-bottom: 0; }
+address { font-style: normal; font-weight: 750; margin-top: 10px; }
+.business-details { margin-block: 14px; }
+.business-details summary { cursor: pointer; min-height: 35px; }
+.business-details p { margin: 4px 0; color: var(--muted); }
+.feature-photo:has(figcaption) { aspect-ratio: auto; background: var(--surface); }
+.feature-photo:has(figcaption) img { height: auto; aspect-ratio: 1.5; }
+.feature-photo figcaption { padding: 8px 14px 12px; color: var(--muted); font-size: .875rem; }
+
+.window-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1fr);
+  gap: clamp(20px, 3.5vw, 48px);
+  align-items: start;
+}
+.measure-note { margin-top: 18px; }
+.measure-note h3 { margin: 0; font-size: 1.3rem; }
+.measure-note p { margin: 8px 0 12px; color: var(--muted); }
+.window-product, .size-hint { grid-column: 1/-1; }
+.form-grid input {
+  width: 100%;
+  min-height: 44px;
+  padding: 6px 9px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: var(--surface);
+}
+.form-grid input[aria-invalid="true"] { border-color: #af2947; }
+.size-hint, .size-warning { margin: 0; color: var(--muted); font-size: .875rem; }
+.size-warning { margin-top: 10px; color: #9a2140; }
+.window-breakdown { margin: 20px 0 0; }
+.window-breakdown div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2px 12px;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--line);
+}
+.window-breakdown dt { color: var(--muted); }
+.window-breakdown dd { margin: 0; font-weight: 650; }
+
+.bloom-emblem {
+  position: absolute;
+  bottom: 6%;
+  inset-inline-end: 6%;
+  width: clamp(76px, 10vw, 125px);
+  aspect-ratio: 1;
+  border: 1px solid rgb(255 255 255 / .66);
+  border-radius: 50%;
+  background: rgb(255 244 237 / .84);
+  box-shadow: 0 8px 25px rgb(106 34 43 / .22);
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+.bloom-emblem i {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  margin-left: -13%;
+  width: 26%;
+  height: 37%;
+  border-radius: 80% 80% 55% 55%;
+  background: linear-gradient(#d44e7b, #f1adb9);
+  transform: rotate(var(--angle)) translateY(-8%);
+  transform-origin: 50% 100%;
+  animation: bloom-open 1.8s calc(var(--petal) * 72ms + .18s) cubic-bezier(.2,.7,.25,1) both;
+}
+.bloom-emblem i:nth-child(1) { --angle: 0deg; --petal: 0; }
+.bloom-emblem i:nth-child(2) { --angle: 51deg; --petal: 1; }
+.bloom-emblem i:nth-child(3) { --angle: 103deg; --petal: 2; }
+.bloom-emblem i:nth-child(4) { --angle: 154deg; --petal: 3; }
+.bloom-emblem i:nth-child(5) { --angle: 206deg; --petal: 4; }
+.bloom-emblem i:nth-child(6) { --angle: 257deg; --petal: 5; }
+.bloom-emblem i:nth-child(7) { --angle: 309deg; --petal: 6; }
+.bloom-emblem b { position: absolute; inset: 43%; background: #ffe1a7; border-radius: 50%; }
+.bloom-replay {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 6px;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+@keyframes bloom-open {
+  from { opacity: .22; transform: rotate(calc(var(--angle) - 40deg)) scale(.12, .27); }
+  to { opacity: 1; transform: rotate(var(--angle)) translateY(-8%) scale(1); }
+}
+
+@media (max-width: 900px) {
+  .window-layout { grid-template-columns: minmax(0, 1fr); }
+  .window-intro .feature-photo { max-height: 295px; }
+  .window-intro .measure-note { margin-top: 10px; }
+}
+@media (max-width: 620px) {
+  .catalog-card { --gallery-pad: 16px; }
+  .window-layout .form-grid label:has(select) { grid-column: 1/-1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bloom-emblem i { animation: none; }
+  .bloom-replay { display: none; }
+}

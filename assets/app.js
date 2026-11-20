@@ -3,6 +3,7 @@ const currency = new Intl.NumberFormat('ru-RU', {
   currency: 'RUB',
   maximumFractionDigits: 0,
 });
+const metric = new Intl.NumberFormat('ru-RU', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 function createDemoDialog() {
   const dialog = document.createElement('dialog');
@@ -75,9 +76,51 @@ if (estimator) {
   const quantity = estimator.querySelector('[data-estimate-quantity]');
   const extras = Array.from(estimator.querySelectorAll('[data-extra]'));
   const output = estimator.querySelector('output');
+  const windowEstimate = estimator.hasAttribute('data-window-estimate');
+  const width = estimator.querySelector('[data-window-width]');
+  const height = estimator.querySelector('[data-window-height]');
+  const glazing = estimator.querySelector('[data-window-glazing]');
+  const mount = estimator.querySelector('[data-window-mount]');
+  const screen = estimator.querySelector('[data-window-screen]');
+  const invalidSize = estimator.querySelector('[data-invalid-size]');
+  const breakdown = Array.from(estimator.querySelectorAll('[data-window-value]'));
+
+  function updateWindowEstimate(units) {
+    const validSize = width.validity.valid && height.validity.valid;
+    invalidSize.hidden = validSize;
+    width.setAttribute('aria-invalid', String(!width.validity.valid));
+    height.setAttribute('aria-invalid', String(!height.validity.valid));
+    if (!validSize) {
+      output.value = '—';
+      breakdown.forEach(field => { field.textContent = '—'; });
+      return;
+    }
+
+    const widthMeters = width.valueAsNumber / 1000;
+    const heightMeters = height.valueAsNumber / 1000;
+    const area = widthMeters * heightMeters * units;
+    const perimeter = 2 * (widthMeters + heightMeters) * units;
+    const prices = {
+      construction: Math.round(area * Number(product.selectedOptions[0].dataset.rate)),
+      glazing: Math.round(area * Number(glazing.value)),
+      mount: Math.round(perimeter * Number(mount.value)),
+      screens: Number(screen.value) * units,
+    };
+    const values = {
+      area: `${metric.format(area)} м²`,
+      perimeter: `${metric.format(perimeter)} м`,
+      ...Object.fromEntries(Object.entries(prices).map(([key, value]) => [key, currency.format(value)])),
+    };
+    breakdown.forEach(field => { field.textContent = values[field.dataset.windowValue]; });
+    output.value = currency.format(Object.values(prices).reduce((total, value) => total + value, 0));
+  }
 
   function updateEstimate() {
     const units = Number(quantity.value);
+    if (windowEstimate) {
+      updateWindowEstimate(units);
+      return;
+    }
     const base = Number(product.selectedOptions[0].dataset.price) * units;
     const added = extras.reduce((total, option) => {
       const multiplier = option.hasAttribute('data-order-extra') ? 1 : units;
@@ -92,6 +135,9 @@ if (estimator) {
   }
 
   estimator.addEventListener('change', updateEstimate);
+  width?.addEventListener('input', updateEstimate);
+  height?.addEventListener('input', updateEstimate);
+  estimator.addEventListener('submit', event => event.preventDefault());
   updateEstimate();
 
   for (const item of document.querySelectorAll('[data-estimate-item]')) {
@@ -113,10 +159,8 @@ if (estimator) {
   }
 
   const request = estimator.querySelector('[data-estimate-request]');
-  request.addEventListener('click', () => {
-    const flowers = request.dataset.requestKind === 'flowers';
-    const choices = flowers ? ['Утро', 'День', 'Вечер'] : ['Будни, до 12:00', 'Будни, после 12:00', 'Выходные'];
-    openDemoDialog(request.textContent.trim(), describeEstimate().join('. '), 'Удобное время', choices);
+  request?.addEventListener('click', () => {
+    openDemoDialog(request.textContent.trim(), describeEstimate().join('. '), 'Удобное время', ['Утро', 'День', 'Вечер']);
   });
 
   const save = estimator.querySelector('[data-save-estimate]');
@@ -128,6 +172,31 @@ if (estimator) {
     link.download = 'maison-bloom-bouquet.txt';
     link.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+}
+
+const visit = document.querySelector('[data-window-visit]');
+visit?.addEventListener('click', () => {
+  const formatter = new Intl.DateTimeFormat('ru-RU', { weekday: 'short', month: 'long', day: 'numeric' });
+  const dates = [1, 2, 3].map(offset => {
+    const date = new Date();
+    date.setDate(date.getDate() + offset);
+    return formatter.format(date);
+  });
+  const slots = dates.flatMap(date => [`${date} · 10:00–13:00`, `${date} · 15:00–18:00`]);
+  openDemoDialog('Выезд замерщика', 'Выберите удобный интервал. Это демонстрация записи на замер ширины, высоты и откосов.', 'День и время', slots);
+});
+
+const replay = document.querySelector('[data-replay-bloom]');
+if (replay) {
+  const flower = document.getElementById(replay.getAttribute('aria-controls'));
+  replay.addEventListener('click', () => {
+    for (const petal of flower.querySelectorAll('i')) {
+      for (const animation of petal.getAnimations()) {
+        animation.cancel();
+        animation.play();
+      }
+    }
   });
 }
 

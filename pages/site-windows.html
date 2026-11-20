@@ -6,9 +6,9 @@
   <title>SkyFrame — Окна и остекление, Екатеринбург</title>
   <meta name="description" content="Окна для разных проёмов и услуги. Демонстрационный сайт для портфолио.">
   <link rel="stylesheet" href="../assets/styles.css">
-  <link rel="stylesheet" href="../assets/editorial.css">
-  <link rel="stylesheet" href="../assets/experience.css">
-  <script src="../assets/app.js" defer></script>
+  <link rel="stylesheet" href="../assets/editorial.css?v=visual-catalog">
+  <link rel="stylesheet" href="../assets/experience.css?v=visual-catalog">
+  <script src="../assets/app.js?v=visual-catalog" defer></script>
 </head>
 <body class="project-theme theme-windows">
   <header class="topbar">
@@ -36,18 +36,19 @@
       <div class="container">
         <div class="section-heading"><h2>Остекление от замера до отделки</h2></div>
         <div class="service-grid">
-          <article class="service-card"><h3>Замер и расчёт</h3><p>Проверка проёма, обсуждение открывания, профиля и подоконников.</p></article>
-          <article class="service-card"><h3>Остекление квартир</h3><p>Замена окон, отливы, подоконники, откосы и вывоз старых рам по договорённости.</p></article>
-          <article class="service-card"><h3>Остекление балконов</h3><p>Холодные и тёплые решения, распашные и раздвижные системы.</p></article>
-          <article class="service-card"><h3>Панорамные окна</h3><p>Широкие проёмы для дома, веранды и видом на участок.</p></article>
-          <article class="service-card"><h3>Обслуживание фурнитуры</h3><p>Регулировка створок, замена ручек, уплотнителей и сеток.</p></article>
-          <article class="service-card"><h3>Защита от шума и солнца</h3><p>Подбор стеклопакетов для оживлённой улицы или солнечной стороны.</p></article>
+          <article class="service-card"><img class="card-photo" src="../assets/art/skyframe-detail.webp" alt="Деталь синей оконной рамы и деревянного откоса" loading="lazy" decoding="async"><h3>Замер и расчёт</h3><p>Проверка проёма, обсуждение открывания, профиля и подоконников.</p></article>
+          <article class="service-card"><img class="card-photo" src="../assets/art/skyframe-preview.webp" alt="Панорамное остекление с видом на осенний клён" loading="lazy" decoding="async"><h3>Остекление квартир</h3><p>Замена окон, отливы, подоконники, откосы и вывоз старых рам по договорённости.</p></article>
+          <article class="service-card"><img class="card-photo" src="../assets/art/window-balcony.webp" alt="Раздвижное остекление лоджии с тёмно-синей рамой" loading="lazy" decoding="async"><h3>Остекление балконов</h3><p>Холодные и тёплые решения, распашные и раздвижные системы.</p></article>
+          <article class="service-card"><img class="card-photo" src="../assets/art/window-terrace.webp" alt="Раздвижная остеклённая дверь из дома на террасу" loading="lazy" decoding="async"><h3>Панорамные окна</h3><p>Широкие проёмы для дома, веранды и видом на участок.</p></article>
+          <article class="service-card"><img class="card-photo" src="../assets/art/skyframe-detail.webp" alt="Деталь синей оконной рамы и деревянного откоса" loading="lazy" decoding="async"><h3>Обслуживание фурнитуры</h3><p>Регулировка створок, замена ручек, уплотнителей и сеток.</p></article>
+          <article class="service-card"><img class="card-photo" src="../assets/art/skyframe-preview.webp" alt="Панорамное остекление с видом на осенний клён" loading="lazy" decoding="async"><h3>Защита от шума и солнца</h3><p>Подбор стеклопакетов для оживлённой улицы или солнечной стороны.</p></article>
         </div>
       </div>
     </section>
     <section class="section catalog-section" id="catalog">
       <div class="container" data-catalog>
-        <div class="section-heading"><h2>Окна для разных проёмов</h2><p>Выберите помещение и сравните примерные цены. Калькулятор ниже покажет, как меняется оценка с опциями.</p></div>
+        <div class="section-heading"><h2>Окна для разных проёмов</h2><p>Сравните примерные цены конструкций за квадратный метр. Для расчёта с учётом площади, монтажа и других опций откройте калькулятор.</p></div>
+        <p class="catalog-photo-note">Фото иллюстрируют типы решений. Детали конкретной комплектации могут отличаться.</p>
         <div class="catalog-controls" hidden>
           <div class="filters" role="group" aria-label="Категории каталога">
             <button type="button" class="filter-button" data-filter="all" aria-pressed="true">Все</button>
@@ -60,130 +61,165 @@
         </div>
         <div class="offer-grid">
             <article class="catalog-card" data-category="flat">
+              <img class="card-photo" src="../assets/art/skyframe-detail.webp" alt="Деталь синей оконной рамы и деревянного откоса" loading="lazy" decoding="async">
               <p class="catalog-category">Квартира</p>
               <h3>Одностворчатое окно</h3>
               <p>Для кухни или кабинета. Поворотно-откидная створка.</p>
-              <div class="catalog-meta"><strong>от 10 800 ₽</strong><a class="item-link" href="#calc" data-estimate-item="0">Рассчитать</a></div>
+              <div class="catalog-meta"><strong>7 800 ₽/м²</strong><a class="item-link" href="#calc" data-estimate-item="0">Рассчитать</a></div>
             </article>
             <article class="catalog-card" data-category="flat">
+              <img class="card-photo" src="../assets/art/skyframe-preview.webp" alt="Панорамное остекление с видом на осенний клён" loading="lazy" decoding="async">
               <p class="catalog-category">Квартира</p>
               <h3>Двустворчатое окно</h3>
               <p>Две секции, одна открывается. Базовый вариант для комнаты.</p>
-              <div class="catalog-meta"><strong>от 12 800 ₽</strong><a class="item-link" href="#calc" data-estimate-item="1">Рассчитать</a></div>
+              <div class="catalog-meta"><strong>9 200 ₽/м²</strong><a class="item-link" href="#calc" data-estimate-item="1">Рассчитать</a></div>
             </article>
             <article class="catalog-card" data-category="flat">
+              <img class="card-photo" src="../assets/art/skyframe-preview.webp" alt="Панорамное остекление с видом на осенний клён" loading="lazy" decoding="async">
               <p class="catalog-category">Квартира</p>
               <h3>Трёхстворчатое окно</h3>
               <p>Широкий проём со средней открывающейся створкой.</p>
-              <div class="catalog-meta"><strong>от 21 400 ₽</strong><a class="item-link" href="#calc" data-estimate-item="2">Рассчитать</a></div>
+              <div class="catalog-meta"><strong>10 700 ₽/м²</strong><a class="item-link" href="#calc" data-estimate-item="2">Рассчитать</a></div>
             </article>
             <article class="catalog-card" data-category="balcony">
+              <img class="card-photo" src="../assets/art/window-balcony.webp" alt="Раздвижное остекление лоджии с тёмно-синей рамой" loading="lazy" decoding="async">
               <p class="catalog-category">Балкон</p>
               <h3>Балконный блок</h3>
               <p>Распашная дверь и окно в едином контуре.</p>
-              <div class="catalog-meta"><strong>от 24 800 ₽</strong><a class="item-link" href="#calc" data-estimate-item="3">Рассчитать</a></div>
+              <div class="catalog-meta"><strong>12 600 ₽/м²</strong><a class="item-link" href="#calc" data-estimate-item="3">Рассчитать</a></div>
             </article>
             <article class="catalog-card" data-category="balcony">
+              <img class="card-photo" src="../assets/art/window-balcony.webp" alt="Раздвижное остекление лоджии с тёмно-синей рамой" loading="lazy" decoding="async">
               <p class="catalog-category">Балкон</p>
               <h3>Холодная лоджия</h3>
               <p>Лёгкая раздвижная система для неотапливаемой лоджии.</p>
-              <div class="catalog-meta"><strong>от 35 200 ₽</strong><a class="item-link" href="#calc" data-estimate-item="4">Рассчитать</a></div>
+              <div class="catalog-meta"><strong>14 200 ₽/м²</strong><a class="item-link" href="#calc" data-estimate-item="4">Рассчитать</a></div>
             </article>
             <article class="catalog-card" data-category="balcony">
+              <img class="card-photo" src="../assets/art/window-balcony.webp" alt="Раздвижное остекление лоджии с тёмно-синей рамой" loading="lazy" decoding="async">
               <p class="catalog-category">Балкон</p>
               <h3>Тёплая лоджия</h3>
               <p>Профиль и стеклопакет для утепляемого помещения.</p>
-              <div class="catalog-meta"><strong>от 49 800 ₽</strong><a class="item-link" href="#calc" data-estimate-item="5">Рассчитать</a></div>
+              <div class="catalog-meta"><strong>19 400 ₽/м²</strong><a class="item-link" href="#calc" data-estimate-item="5">Рассчитать</a></div>
             </article>
             <article class="catalog-card" data-category="house">
+              <img class="card-photo" src="../assets/art/skyframe-preview.webp" alt="Панорамное остекление с видом на осенний клён" loading="lazy" decoding="async">
               <p class="catalog-category">Загородный дом</p>
               <h3>Панорамное окно</h3>
               <p>Широкий проём с минимальным количеством вертикальных линий.</p>
-              <div class="catalog-meta"><strong>от 58 700 ₽</strong><a class="item-link" href="#calc" data-estimate-item="6">Рассчитать</a></div>
+              <div class="catalog-meta"><strong>21 500 ₽/м²</strong><a class="item-link" href="#calc" data-estimate-item="6">Рассчитать</a></div>
             </article>
             <article class="catalog-card" data-category="house">
+              <img class="card-photo" src="../assets/art/window-terrace.webp" alt="Раздвижная остеклённая дверь из дома на террасу" loading="lazy" decoding="async">
               <p class="catalog-category">Загородный дом</p>
               <h3>Террасная дверь</h3>
               <p>Раздвижная система для выхода на веранду.</p>
-              <div class="catalog-meta"><strong>от 89 900 ₽</strong><a class="item-link" href="#calc" data-estimate-item="7">Рассчитать</a></div>
+              <div class="catalog-meta"><strong>28 500 ₽/м²</strong><a class="item-link" href="#calc" data-estimate-item="7">Рассчитать</a></div>
             </article>
             <article class="catalog-card" data-category="house">
+              <img class="card-photo" src="../assets/art/window-terrace.webp" alt="Раздвижная остеклённая дверь из дома на террасу" loading="lazy" decoding="async">
               <p class="catalog-category">Загородный дом</p>
               <h3>Угловое остекление</h3>
               <p>Два проёма для естественного света с разных сторон.</p>
-              <div class="catalog-meta"><strong>от 103 000 ₽</strong><a class="item-link" href="#calc" data-estimate-item="8">Рассчитать</a></div>
+              <div class="catalog-meta"><strong>31 200 ₽/м²</strong><a class="item-link" href="#calc" data-estimate-item="8">Рассчитать</a></div>
             </article>
             <article class="catalog-card" data-category="options">
+              <img class="card-photo" src="../assets/art/skyframe-detail.webp" alt="Деталь синей оконной рамы и деревянного откоса" loading="lazy" decoding="async">
               <p class="catalog-category">Опции</p>
               <h3>Москитная сетка</h3>
               <p>Съёмная сетка на одну створку.</p>
               <div class="catalog-meta"><strong>от 1 900 ₽</strong><a class="item-link" href="#calc" data-estimate-option="1900">Добавить в расчёт</a></div>
             </article>
             <article class="catalog-card" data-category="options">
+              <img class="card-photo" src="../assets/art/skyframe-detail.webp" alt="Деталь синей оконной рамы и деревянного откоса" loading="lazy" decoding="async">
               <p class="catalog-category">Опции</p>
               <h3>Энергосберегающий стеклопакет</h3>
-              <p>Доплата за улучшенный стеклопакет на типовой проём.</p>
-              <div class="catalog-meta"><strong>от 3 200 ₽</strong><a class="item-link" href="#calc" data-estimate-option="3200">Добавить в расчёт</a></div>
+              <p>Доплата за каждый квадратный метр улучшенного остекления.</p>
+              <div class="catalog-meta"><strong>от 3 200 ₽/м²</strong><a class="item-link" href="#calc" data-estimate-option="3200">Добавить в расчёт</a></div>
             </article>
             <article class="catalog-card" data-category="options">
+              <img class="card-photo" src="../assets/art/skyframe-detail.webp" alt="Деталь синей оконной рамы и деревянного откоса" loading="lazy" decoding="async">
               <p class="catalog-category">Опции</p>
               <h3>Акустический пакет</h3>
-              <p>Доплата за стеклопакет с усиленной звукоизоляцией.</p>
-              <div class="catalog-meta"><strong>от 6 900 ₽</strong><a class="item-link" href="#calc" data-estimate-option="6900">Добавить в расчёт</a></div>
+              <p>Доплата за квадратный метр остекления с усиленной звукоизоляцией.</p>
+              <div class="catalog-meta"><strong>от 6 900 ₽/м²</strong><a class="item-link" href="#calc" data-estimate-option="6900">Добавить в расчёт</a></div>
             </article>
         </div>
       </div>
     </section>
     <section class="section" id="calc">
-    <div class="container split feature-layout">
-        <figure class="project-photo feature-photo">
-  <img src="../assets/art/skyframe-detail.webp" alt="Синяя оконная рама и дубовый откос в лучах солнца" loading="lazy" decoding="async">
-</figure>
-        <form class="card estimate" data-estimate data-document="SkyFrame">
-          <div class="section-heading"><h2>Предварительный расчёт</h2><p>Выберите тип окна, стеклопакет и монтаж. Сумма ориентировочная и зависит от фактических размеров проёма.</p></div>
+      <div class="container window-layout">
+        <div class="window-intro">
+          <div class="section-heading">
+            <h2>Рассчитайте по размерам проёма</h2>
+            <p>Введите ширину и высоту в миллиметрах. Калькулятор определит площадь остекления и длину монтажного контура. Для проёмов разных размеров сделайте отдельные расчёты.</p>
+          </div>
+          <figure class="project-photo feature-photo">
+            <img src="../assets/art/skyframe-detail.webp" alt="Дубовый откос и стык синей оконной рамы со стеклом" loading="lazy" decoding="async">
+          </figure>
+          <div class="measure-note">
+            <h3>Нужен точный замер?</h3>
+            <p>Пример выезда специалиста: замерить проём, сверить откосы и выбрать конфигурацию. Для демонстрации можно выбрать интервал без ввода контактов.</p>
+            <button type="button" class="ghost" data-window-visit>Выбрать время замера в демо</button>
+          </div>
+        </div>
+        <form class="card estimate" data-estimate data-window-estimate>
           <div class="form-grid">
-            <label>Тип конструкции
+            <label class="window-product">Конструкция
               <select data-estimate-product>
-                <option value="0" data-price="10800">Одностворчатое окно · 10 800 ₽</option>
-                <option value="1" data-price="12800" selected>Двустворчатое окно · 12 800 ₽</option>
-                <option value="2" data-price="21400">Трёхстворчатое окно · 21 400 ₽</option>
-                <option value="3" data-price="24800">Балконный блок · 24 800 ₽</option>
-                <option value="4" data-price="35200">Холодная лоджия · 35 200 ₽</option>
-                <option value="5" data-price="49800">Тёплая лоджия · 49 800 ₽</option>
-                <option value="6" data-price="58700">Панорамное окно · 58 700 ₽</option>
-                <option value="7" data-price="89900">Террасная дверь · 89 900 ₽</option>
-                <option value="8" data-price="103000">Угловое остекление · 103 000 ₽</option>
+                <option value="0" data-rate="7800">Одностворчатое окно · 7 800 ₽/м²</option>
+                <option value="1" data-rate="9200" selected>Двустворчатое окно · 9 200 ₽/м²</option>
+                <option value="2" data-rate="10700">Трёхстворчатое окно · 10 700 ₽/м²</option>
+                <option value="3" data-rate="12600">Балконный блок · 12 600 ₽/м²</option>
+                <option value="4" data-rate="14200">Холодная лоджия · 14 200 ₽/м²</option>
+                <option value="5" data-rate="19400">Тёплая лоджия · 19 400 ₽/м²</option>
+                <option value="6" data-rate="21500">Панорамное окно · 21 500 ₽/м²</option>
+                <option value="7" data-rate="28500">Террасная дверь · 28 500 ₽/м²</option>
+                <option value="8" data-rate="31200">Угловое остекление · 31 200 ₽/м²</option>
               </select>
             </label>
-            <label>Количество
+            <label>Ширина проёма, мм
+              <input type="number" inputmode="numeric" required min="300" max="6000" step="1" value="1300" data-window-width aria-describedby="size-hint">
+            </label>
+            <label>Высота проёма, мм
+              <input type="number" inputmode="numeric" required min="300" max="6000" step="1" value="1400" data-window-height aria-describedby="size-hint">
+            </label>
+            <p class="size-hint" id="size-hint">Введите целое число от 300 до 6 000 мм для каждой стороны.</p>
+            <label>Одинаковых проёмов
               <select data-estimate-quantity><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
             </label>
             <label>Стеклопакет
-              <select data-extra>
+              <select data-extra data-window-glazing>
                 <option value="0">Стандартный · включён</option>
-                <option value="3200">Энергосберегающий · +3 200 ₽</option>
-                <option value="6900">Акустический · +6 900 ₽</option>
+                <option value="3200">Энергосберегающий · +3 200 ₽/м²</option>
+                <option value="6900">Акустический · +6 900 ₽/м²</option>
               </select>
             </label>
             <label>Москитная сетка
-              <select data-extra>
+              <select data-extra data-window-screen>
                 <option value="0">Без сетки</option>
-                <option value="1900">На одну створку · +1 900 ₽</option>
+                <option value="1900">По одной на проём · +1 900 ₽/шт.</option>
               </select>
             </label>
             <label>Монтаж
-              <select data-extra>
+              <select data-window-mount>
                 <option value="0">Без монтажа</option>
-                <option value="6900">С монтажом · +6 900 ₽</option>
-                <option value="9700">Монтаж и отделка откосов · +9 700 ₽</option>
+                <option value="1450" selected>Монтаж · +1 450 ₽/м</option>
+                <option value="2050">Монтаж и откосы · +2 050 ₽/м</option>
               </select>
             </label>
           </div>
-          <div class="estimate-result"><span>Ориентировочная стоимость</span><output aria-live="polite">12 800 ₽</output></div>
-          <div class="hero-actions">
-            <button type="button" class="btn" data-estimate-request data-request-kind="windows">Запросить замер</button>
-
-          </div>
+          <p class="size-warning" data-invalid-size role="status" hidden>Укажите ширину и высоту в допустимом диапазоне, чтобы увидеть расчёт.</p>
+          <dl class="window-breakdown">
+            <div><dt>Площадь проёмов</dt><dd data-window-value="area">1,82 м²</dd></div>
+            <div><dt>Периметр проёмов</dt><dd data-window-value="perimeter">5,40 м</dd></div>
+            <div><dt>Конструкции</dt><dd data-window-value="construction">16 744 ₽</dd></div>
+            <div><dt>Доплата за остекление</dt><dd data-window-value="glazing">0 ₽</dd></div>
+            <div><dt>Монтаж</dt><dd data-window-value="mount">7 830 ₽</dd></div>
+            <div><dt>Сетки</dt><dd data-window-value="screens">0 ₽</dd></div>
+          </dl>
+          <div class="estimate-result"><span>Ориентировочная стоимость</span><output aria-live="polite">24 574 ₽</output></div>
+          <p class="note">Демонстрационные тарифы. Доставка и демонтаж в расчёт не входят.</p>
           <noscript><p>Для изменения расчёта включите JavaScript.</p></noscript>
         </form>
       </div>

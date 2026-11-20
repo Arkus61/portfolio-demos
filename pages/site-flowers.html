@@ -6,9 +6,9 @@
   <title>Maison Bloom — Цветочный бутик, Санкт-Петербург</title>
   <meta name="description" content="Букеты и композиции и услуги. Демонстрационный сайт для портфолио.">
   <link rel="stylesheet" href="../assets/styles.css">
-  <link rel="stylesheet" href="../assets/editorial.css">
-  <link rel="stylesheet" href="../assets/experience.css">
-  <script src="../assets/app.js" defer></script>
+  <link rel="stylesheet" href="../assets/editorial.css?v=visual-catalog">
+  <link rel="stylesheet" href="../assets/experience.css?v=visual-catalog">
+  <script src="../assets/app.js?v=visual-catalog" defer></script>
 </head>
 <body class="project-theme theme-flowers">
   <header class="topbar">
@@ -23,31 +23,32 @@
     </div>
   </header>
   <main>
-    <section class="hero"><div class="container hero-grid"><div><div class="kicker">Цветочный бутик · Санкт-Петербург</div><h1 class="display">Эмоции, которые <strong>живут в памяти</strong></h1><p class="lead">Сезонные букеты, подарочная упаковка и доставка ко времени. Выберите готовую композицию или соберите букет в своём стиле.</p><div class="hero-actions"><a class="btn" href="#catalog">Выбрать букет</a><a class="ghost" href="#benefits">Почему нас выбирают</a></div></div>
-<figure class="project-hero" data-motion="petals">
+    <section class="hero"><div class="container hero-grid"><div><div class="kicker">Цветочный бутик · Санкт-Петербург</div><h1 class="display">Эмоции, которые <strong>живут в памяти</strong></h1><p class="lead">Сезонные букеты, подарочная упаковка и доставка ко времени. Выберите готовую композицию или соберите букет в своём стиле.</p><div class="hero-actions"><a class="btn" href="#catalog">Выбрать букет</a><a class="ghost" href="#benefits">Услуги и доставка</a><button type="button" class="bloom-replay" data-replay-bloom aria-controls="flower-animation">Показать цветение</button></div></div>
+<figure class="project-hero" data-motion="bloom">
   <img src="../assets/art/maison-bloom-hero.webp"
        srcset="../assets/art/maison-bloom-preview.webp 640w, ../assets/art/maison-bloom-hero.webp 1024w"
        sizes="(max-width: 900px) calc(100vw - 40px), (max-width: 1240px) 47vw, 590px"
        alt="Букет из роз, пионов и ранункулюсов на бордовой подставке" fetchpriority="high" decoding="async">
-<span class="hero-motion" aria-hidden="true"></span>
+<span class="bloom-emblem" id="flower-animation" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b></b></span>
 </figure>
 </div></section>
     <section class="section service-section" id="benefits">
       <div class="container">
         <div class="section-heading"><h2>Флористика для подарков и событий</h2></div>
         <div class="service-grid">
-          <article class="service-card"><h3>Букеты по поводу</h3><p>Подбор по палитре, сезону и бюджету. Можно добавить открытку и подарочную упаковку.</p></article>
-          <article class="service-card"><h3>Оформление свадеб</h3><p>Букет невесты, бутоньерки, композиции на столы и оформление камерной церемонии.</p></article>
-          <article class="service-card"><h3>Цветочная подписка</h3><p>Свежие композиции домой, в офис или ресторан с согласованной частотой и размером.</p></article>
-          <article class="service-card"><h3>Доставка по городу</h3><p>Выбор интервала, фото композиции перед отправкой и возможность самовывоза.</p></article>
-          <article class="service-card"><h3>Корпоративные подарки</h3><p>Серия букетов для команды или партнёров, общая стилистика и упаковка.</p></article>
-          <article class="service-card"><h3>Цветы в вазе</h3><p>Подбор композиции под интерьер и памятка по уходу за сезонными цветами.</p></article>
+          <article class="service-card"><img class="card-photo" src="../assets/art/bloom-cloud.webp" alt="Розовые розы и ранункулюсы в воздушной упаковке" loading="lazy" decoding="async"><h3>Букеты по поводу</h3><p>Подбор по палитре, сезону и бюджету. Можно добавить открытку и подарочную упаковку.</p></article>
+          <article class="service-card"><img class="card-photo" src="../assets/art/bloom-wedding.webp" alt="Светлый букет невесты и бутоньерка в той же палитре" loading="lazy" decoding="async"><h3>Оформление свадеб</h3><p>Букет невесты, бутоньерки, композиции на столы и оформление камерной церемонии.</p></article>
+          <article class="service-card"><img class="card-photo" src="../assets/art/bloom-subscription.webp" alt="Сезонная композиция в прозрачной вазе на столе" loading="lazy" decoding="async"><h3>Цветочная подписка</h3><p>Свежие композиции домой, в офис или ресторан с согласованной частотой и размером.</p></article>
+          <article class="service-card"><img class="card-photo" src="../assets/art/maison-bloom-detail.webp" alt="Цветы, ленты и упаковка на столе флориста" loading="lazy" decoding="async"><h3>Доставка по городу</h3><p>Выбор интервала, фото композиции перед отправкой и возможность самовывоза.</p></article>
+          <article class="service-card"><img class="card-photo" src="../assets/art/bloom-celebration.webp" alt="Большой яркий букет в сливовой бумаге" loading="lazy" decoding="async"><h3>Корпоративные подарки</h3><p>Серия букетов для команды или партнёров, общая стилистика и упаковка.</p></article>
+          <article class="service-card"><img class="card-photo" src="../assets/art/bloom-ceramic.webp" alt="Коралловая цветочная композиция в керамической чаше" loading="lazy" decoding="async"><h3>Цветы в вазе</h3><p>Подбор композиции под интерьер и памятка по уходу за сезонными цветами.</p></article>
         </div>
       </div>
     </section>
     <section class="section catalog-section" id="catalog">
       <div class="container" data-catalog>
         <div class="section-heading"><h2>Букеты и композиции</h2><p>Выберите повод или понравившуюся палитру. В карточках указана ориентировочная цена за показанный размер.</p></div>
+        <p class="catalog-photo-note">Фото показывают варианты композиций. Состав сезонных букетов может меняться.</p>
         <div class="catalog-controls" hidden>
           <div class="filters" role="group" aria-label="Категории каталога">
             <button type="button" class="filter-button" data-filter="all" aria-pressed="true">Все</button>
@@ -60,72 +61,84 @@
         </div>
         <div class="offer-grid">
             <article class="catalog-card" data-category="everyday">
+              <img class="card-photo" src="../assets/art/bloom-morning.webp" alt="Букет из светлой эустомы и роз в матовой бумаге" loading="lazy" decoding="async">
               <p class="catalog-category">На каждый день</p>
               <h3>Нежность утра</h3>
               <p>Эустома, кустовая роза и светлая упаковка. Компактный букет для небольшого знака внимания.</p>
               <div class="catalog-meta"><strong>2 900 ₽</strong><a class="item-link" href="#builder" data-estimate-item="0">Собрать с этим букетом</a></div>
             </article>
             <article class="catalog-card" data-category="everyday">
+              <img class="card-photo" src="../assets/art/bloom-lilac.webp" alt="Небольшой сиреневый букет из статицы и светлых гвоздик" loading="lazy" decoding="async">
               <p class="catalog-category">На каждый день</p>
               <h3>Лиловый штрих</h3>
               <p>Лиловая статица, кремовые гвоздики и зелень в матовой бумаге.</p>
               <div class="catalog-meta"><strong>3 400 ₽</strong><a class="item-link" href="#builder" data-estimate-item="1">Собрать с этим букетом</a></div>
             </article>
             <article class="catalog-card" data-category="everyday">
+              <img class="card-photo" src="../assets/art/bloom-peach.webp" alt="Персиковые розы и белая альстромерия в тёплой упаковке" loading="lazy" decoding="async">
               <p class="catalog-category">На каждый день</p>
               <h3>Персиковый чай</h3>
               <p>Персиковые розы и белая альстромерия в тёплой гамме.</p>
               <div class="catalog-meta"><strong>3 800 ₽</strong><a class="item-link" href="#builder" data-estimate-item="2">Собрать с этим букетом</a></div>
             </article>
             <article class="catalog-card" data-category="signature">
+              <img class="card-photo" src="../assets/art/bloom-cloud.webp" alt="Розовые розы и ранункулюсы в воздушной упаковке" loading="lazy" decoding="async">
               <p class="catalog-category">Авторские</p>
               <h3>Розовое облако</h3>
               <p>Кустовые розы, ранункулюсы и эустома. Сборка с мягкой асимметрией.</p>
               <div class="catalog-meta"><strong>4 900 ₽</strong><a class="item-link" href="#builder" data-estimate-item="3">Собрать с этим букетом</a></div>
             </article>
             <article class="catalog-card" data-category="signature">
+              <img class="card-photo" src="../assets/art/bloom-peonies.webp" alt="Пышный розовый букет из пионов и садовых роз" loading="lazy" decoding="async">
               <p class="catalog-category">Авторские</p>
               <h3>Пионовый сад</h3>
               <p>Пионы, садовые розы и сезонные ветви в свободной композиции.</p>
               <div class="catalog-meta"><strong>6 900 ₽</strong><a class="item-link" href="#builder" data-estimate-item="4">Собрать с этим букетом</a></div>
             </article>
             <article class="catalog-card" data-category="signature">
+              <img class="card-photo" src="../assets/art/maison-bloom-preview.webp" alt="Яркий букет с винными и коралловыми цветами" loading="lazy" decoding="async">
               <p class="catalog-category">Авторские</p>
               <h3>Гранатовый свет</h3>
               <p>Винные и коралловые цветы с выразительным центральным акцентом.</p>
               <div class="catalog-meta"><strong>7 200 ₽</strong><a class="item-link" href="#builder" data-estimate-item="5">Собрать с этим букетом</a></div>
             </article>
             <article class="catalog-card" data-category="event">
+              <img class="card-photo" src="../assets/art/bloom-wedding.webp" alt="Светлый букет невесты и бутоньерка в той же палитре" loading="lazy" decoding="async">
               <p class="catalog-category">Для события</p>
               <h3>Камерная свадьба</h3>
               <p>Букет невесты и бутоньерка в одной палитре. Состав согласуется по сезону.</p>
               <div class="catalog-meta"><strong>9 800 ₽</strong><a class="item-link" href="#builder" data-estimate-item="6">Собрать с этим букетом</a></div>
             </article>
             <article class="catalog-card" data-category="event">
+              <img class="card-photo" src="../assets/art/bloom-celebration.webp" alt="Большой яркий букет в сливовой бумаге" loading="lazy" decoding="async">
               <p class="catalog-category">Для события</p>
               <h3>Большой праздник</h3>
               <p>Объёмный букет для юбилея в высокой упаковке с лентой.</p>
               <div class="catalog-meta"><strong>11 900 ₽</strong><a class="item-link" href="#builder" data-estimate-item="7">Собрать с этим букетом</a></div>
             </article>
             <article class="catalog-card" data-category="event">
+              <img class="card-photo" src="../assets/art/bloom-white.webp" alt="Белые садовые розы и эустома с шёлковой лентой" loading="lazy" decoding="async">
               <p class="catalog-category">Для события</p>
               <h3>Белый сад</h3>
               <p>Свободная композиция из белых и кремовых цветов для торжественного повода.</p>
               <div class="catalog-meta"><strong>8 200 ₽</strong><a class="item-link" href="#builder" data-estimate-item="8">Собрать с этим букетом</a></div>
             </article>
             <article class="catalog-card" data-category="decor">
+              <img class="card-photo" src="../assets/art/bloom-ceramic.webp" alt="Коралловая цветочная композиция в керамической чаше" loading="lazy" decoding="async">
               <p class="catalog-category">Для интерьера</p>
               <h3>Цветы в керамике</h3>
               <p>Настольная композиция в керамическом сосуде с невысоким силуэтом.</p>
               <div class="catalog-meta"><strong>6 200 ₽</strong><a class="item-link" href="#builder" data-estimate-item="9">Собрать с этим букетом</a></div>
             </article>
             <article class="catalog-card" data-category="decor">
+              <img class="card-photo" src="../assets/art/bloom-lavender.webp" alt="Лаванда и сухоцветы в нежной лиловой гамме" loading="lazy" decoding="async">
               <p class="catalog-category">Для интерьера</p>
               <h3>Лавандовое поле</h3>
               <p>Сухоцветы и лавандовые оттенки для прихожей, спальни или студии.</p>
               <div class="catalog-meta"><strong>5 200 ₽</strong><a class="item-link" href="#builder" data-estimate-item="10">Собрать с этим букетом</a></div>
             </article>
             <article class="catalog-card" data-category="decor">
+              <img class="card-photo" src="../assets/art/bloom-subscription.webp" alt="Сезонная композиция в прозрачной вазе на столе" loading="lazy" decoding="async">
               <p class="catalog-category">Для интерьера</p>
               <h3>Подписка на сезон</h3>
               <p>Одна сезонная композиция в неделю. Цена указана за одну доставку.</p>
